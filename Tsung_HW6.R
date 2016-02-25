@@ -1,4 +1,4 @@
-#1 Using	the	diamonds	data	set,	create	plot that shows relationship of diamond weight to price
+#1 Using the diamonds data set, I create plot that shows relationship of diamond weight to price
 require("ggplot2") #loads ggplot package
 ?print
 ?print.ggplot
@@ -21,7 +21,7 @@ carat_prc <-carat_prc + labs(title='Diamonds - Weight to Price by Color') +
 
 print(carat_prc) #prints the plot of data set Diamonds with weight to price by color
 
-#2 	Remove	the	non-linearity	and	replot.	Think	about	transforming	both	price	and	weight	(e.g.	take	the	natural	log	of	both	variables)
+#2 Removing the non-linearity, I replot with both price and weight log-transformed by taking natural log of both variables
 
 carat_prc <- ggplot(diamonds, aes(x=log(carat), y=log(price))) #log transformation on the x and y
 log_carat_prc <-carat_prc + labs(title = "Diamonds - Weight to Price (Linear)") + 
@@ -31,10 +31,10 @@ log_carat_prc <-carat_prc + labs(title = "Diamonds - Weight to Price (Linear)") 
 
 print(log_carat_prc) #prints the transformed plot
 
-#3 Remove	the	linear	trend	(create	a	linear	model	and	use	the	residuals	on	y	axis)	
-#and	create	a	plot	plot.	Use grid package	to	create	a	custom	version	of	
-#the	plothist.	The	histogram	on	the	left	is	a	density	histogram	
-#of	the	price	and	the	histogram	on	the	bottom	is	a	density	of	carat.
+#3 Remove the linear trend (create a linear model and use the residuals on the y-axis
+#create a plot using grid package to create a custom version of the plot
+#histogram on the left is a density historgram of the price
+#histogram on bottom is density histogram of carat
 
 require(grid) #using grid package to create custom version of plothist
 require(gridExtra) #using gridExtra package to arrange plots

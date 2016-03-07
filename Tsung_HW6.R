@@ -5,6 +5,9 @@ require("ggplot2") #loads ggplot package
 
 require("grid") #Loading required package: grid
 
+## Prof G: need to require gridExtra, I've added here
+require("gridExtra")
+
 #Brings Diamonds data into memory
 data(diamonds)
 str(diamonds)
@@ -99,3 +102,5 @@ print(plot, vp = viewport(layout.pos.row = 1:25, layout.pos.col = 1:25))
 print(hist_carat, vp = viewport(layout.pos.row = 8:12, layout.pos.col = 17:24))
 print(hist_price, vp = viewport(layout.pos.row = 19:23, layout.pos.col = 3:11))
 #prints the hist_price and hist_carat on top of the plot through viewpoint
+
+## Prof G: Did not print all of the plots?

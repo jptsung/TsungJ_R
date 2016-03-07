@@ -4,6 +4,8 @@ c(20:1) #b. creates vector 20,19,...,2,1
 c(1:20,19:1) #c. creates vector 1,2,3,...,19,20,19,18,...,2,1
 tmp <- c(4,6,3) #d. Assigns vector to tmp with values (4,6,3)
 rep(tmp,t=10) #e. repeats tmp 10 times, so there are 10 occurences of 4
+## Prof G: Works but not in a general way. Have to know
+##         the values in tmp.
 c(rep(tmp,t=10),4) #f. repeats tmp 10 times but includes a 4 at the end so there are 11 occurences of just 4
 rep(tmp,times = c(10,20,30)) #g. repeats 4 in tmp have 10 occurences, 6 have 20 occurences, 3 have 30 occurences
 
